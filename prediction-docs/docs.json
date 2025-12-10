@@ -1,0 +1,60 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "theme": "mint",
+  "name": "Prediction Bot Documentation",
+  "colors": {
+    "primary": "#0D9373",
+    "dark": "#0D9373"
+  },
+  "favicon": "/favicon.ico",
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Getting Started",
+        "icon": "rocket",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["index", "getting-started/links", "getting-started/faqs"]
+          },
+          {
+            "group": "Prediction Bot",
+            "pages": [
+              "prediction-bot/notifications",
+              "prediction-bot/wallet",
+              "prediction-bot/commands"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Community",
+          "icon": "discord",
+          "href": "https://discord.gg/jup"
+        }
+      ]
+    }
+  },
+  "logo": "/logo/logo.png",
+  "css": "/custom.css",
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Launch",
+      "href": "https://t.me/jup_pred_bot"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/jup_ag",
+      "discord": "https://discord.gg/jup"
+    }
+  }
+}
