@@ -1,0 +1,13 @@
+/* Center card content when there's no description */
+.mint-card,
+[class*='card'] {
+  text-align: center !important;
+}
+
+.mint-card > *,
+[class*='card'] > * {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
