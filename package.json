@@ -4,7 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "mint dev --port 3001"
+    "dev": "mint dev --port 3001",
+    "lint": "mint broken-links",
+    "lint:fix": "echo 'No auto-fix available in mintlify CLI, running lint target instead.' && bun lint"
   },
   "devDependencies": {
     "mint": "^4.2.232"
