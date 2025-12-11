@@ -1,11 +1,10 @@
 {
-  "name": "@tg-bot/prediction-docs",
+  "name": "@tg-bot/docs",
   "version": "1.0.0",
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "mint dev --port 3001",
-    "start": "mint start"
+    "dev": "mint dev --port 3001"
   },
   "devDependencies": {
     "mint": "^4.2.232"

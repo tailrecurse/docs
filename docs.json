@@ -14,12 +14,16 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Getting Started",
-        "icon": "rocket",
+        "tab": "Comet Predict Bot",
+        "icon": "meteor",
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["index", "getting-started/links", "getting-started/faqs"]
+            "pages": [
+              "prediction-bot/getting-started/introduction",
+              "prediction-bot/getting-started/links",
+              "prediction-bot/getting-started/faqs"
+            ]
           },
           {
             "group": "Prediction Bot",
@@ -30,10 +34,38 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Comet Trading Bot",
+        "icon": "comet",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "trading-bot/getting-started/introduction",
+              "trading-bot/getting-started/links",
+              "trading-bot/getting-started/faqs"
+            ]
+          },
+          {
+            "group": "Trading Bot",
+            "pages": ["trading-bot/wallet", "trading-bot/commands"]
+          }
+        ]
       }
     ],
     "global": {
       "anchors": [
+        {
+          "anchor": "Launch Comet Predict Bot",
+          "icon": "meteor",
+          "href": "https://t.me/jup_pred_bot"
+        },
+        {
+          "anchor": "Launch Comet Trading Bot",
+          "icon": "comet",
+          "href": "https://t.me/jup_comet_bot"
+        },
         {
           "anchor": "Community",
           "icon": "discord",
@@ -44,13 +76,6 @@
   },
   "logo": "/logo/logo.png",
   "css": "/custom.css",
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Launch",
-      "href": "https://t.me/jup_pred_bot"
-    }
-  },
   "footer": {
     "socials": {
       "x": "https://x.com/jup_ag",

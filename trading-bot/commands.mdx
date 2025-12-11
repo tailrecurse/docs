@@ -1,0 +1,83 @@
+---
+title: 'Commands'
+---
+
+## Scanning Tokens
+
+To trade any token, simply send its mint address or symbol to the bot. The bot will:
+
+1. **Scan the token** and display information
+2. **Show trading options**: Swap, Limit Order, or DCA
+3. **Display your holdings** if you own the token
+
+<img
+  src="/images/trading-bot/scan.png"
+  alt="Token scan interface"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+To access commands, tap the menu icon (☰) next to the message input or type `/`
+
+<img
+  src="/images/trading-bot/commands.png"
+  alt="Bot commands menu"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+### `/start`
+
+- Creates your wallet (if first time)
+- Shows the main menu
+- Displays your wallet address and balances
+
+### `/menu`
+
+Shows the main menu.
+
+### `/swap`
+
+Scan a token to swap. You can:
+
+- Send a token mint address or symbol
+- The bot will scan the token and show trading options
+- Choose to buy or sell tokens instantly
+
+### `/limit`
+
+Create a limit order. You can:
+
+- Set buy orders at a target price below current market
+- Set sell orders at a target price above current market
+- Orders execute automatically when price reaches your target
+
+### `/dca`
+
+Set up Dollar Cost Averaging. You can:
+
+- Automate recurring token purchases
+- Set the amount per transaction
+- Configure the interval (minutes, hours, or days)
+- Spread your investment over time
+
+### `/withdraw`
+
+1. **🏠 Main menu**
+2. **💸 Withdraw**
+3. Enter the recipient Solana address
+
+<img
+  src="/images/trading-bot/withdraw-input-address.png"
+  alt="Withdraw input address screen"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+4. Select token (SOL or USDC)
+5. Choose amount (preset percentages or custom)
+
+<img
+  src="/images/trading-bot/withdraw-input-amount.png"
+  alt="Withdraw input amount screen"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+6. Confirm the withdrawal

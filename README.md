@@ -90,13 +90,13 @@ See the [Mintlify CLI Documentation](https://mintlify.com/docs/cli) for more det
 3. Connect your GitHub repository
 4. In **Settings > Git Settings > General**:
    - Toggle **Set up as monorepo** on
-   - Enter the path: `apps/prediction-docs`
+   - Enter the path: `apps/docs`
    - Do not include a trailing slash
 
 ### File Structure
 
 ```
-apps/prediction-docs/
+apps/docs/
 ├── docs.json          # Site configuration (navigation, themes, etc.)
 ├── index.mdx          # Entry page
 ├── quickstart.mdx     # Quickstart guide
