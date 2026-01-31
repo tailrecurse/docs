@@ -1,0 +1,58 @@
+---
+title: 'Copy Trading'
+---
+
+Copy Trader mirrors trades from another wallet to yours. Configure target wallet, amounts, slippage, and filters; only **active** configs execute trades.
+
+## Menu
+
+<img
+  src="/images/trading-bot/copy-trading.png"
+  alt="Copy Trader main menu"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+| Indicator        | Meaning                                            |
+| ---------------- | -------------------------------------------------- |
+| **Green circle** | **Active** — config is running and copying trades. |
+| **Red circle**   | **Inactive** — config is paused.                   |
+
+**Actions:** **Add config** (creates new; you’ll enter target wallet), **Refresh**, **Back**.
+
+---
+
+## Target wallet (new config)
+
+<img
+  src="/images/trading-bot/copy-trading-wallet.png"
+  alt="Enter target wallet address"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+Enter the **Solana address** of the wallet to copy. Your connected wallet executes the copied trades.
+
+---
+
+## Config screen
+
+<img
+  src="/images/trading-bot/copy-trading-config.png"
+  alt="Copy trade configuration"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+Tap any field to edit. Top line: config name, target address, **Status** (green = Active, red = Inactive), buy count.
+
+| Section           | Fields                                                                  |
+| ----------------- | ----------------------------------------------------------------------- |
+| **Core**          | Wallet (yours), Name, Target address                                    |
+| **Buy strategy**  | Buy exact / Buy % / Buy fixed (one selected = green)                    |
+| **Sell strategy** | Don’t follow / Follow % / Sell fixed %                                  |
+| **Execution**     | Buy & sell slippage, Max buys, Max buys/token                           |
+| **Filters**       | Platforms, Max buy amount, Min/Max trigger buy, token age, Min/Max mcap |
+| **Safety**        | Filter non-sellable tokens (recommended on), Mint blacklist             |
+| **Schedule**      | Start at, End at (optional)                                             |
+
+**Actions:** Activate, Reset buys, Duplicate, Delete, Back.
+
+<Info>Keep **Filter non-sellable tokens** on and verify the target wallet address.</Info>

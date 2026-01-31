@@ -1,0 +1,46 @@
+---
+title: 'Sniper Mode'
+---
+
+Sniper Mode runs **automatic buys** when new tokens match your filters (e.g. new liquidity pools). Each config has its own wallet, amount, slippage, and filters; only **active** configs run.
+
+## Menu
+
+<img
+  src="/images/trading-bot/sniper-menu.png"
+  alt="Sniper Mode menu"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+| Indicator        | Meaning                                                  |
+| ---------------- | -------------------------------------------------------- |
+| **Green circle** | **Active** — config runs and will buy when tokens match. |
+| **Red circle**   | **Inactive** — config paused.                            |
+
+Each row shows **Buys: X/Y** (executed / max) and **Wallet** (name + truncated address). **Actions:** toggle status, open config, Edit, **Add config**, Refresh, Back.
+
+---
+
+## Config screen
+
+<img
+  src="/images/trading-bot/sniper-config.jpeg"
+  alt="Sniper config"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+Tap any field to edit. Top: config name, **Status** (green/red), Buys X/Y, **Event** (e.g. Liquidity Pools • All platforms).
+
+| Section       | Fields                                                             |
+| ------------- | ------------------------------------------------------------------ |
+| **Basics**    | Wallet, Edit basics                                                |
+| **Trading**   | Buy amount (e.g. $0.1 SOL), Slippage %, Max buys, Min Liq, Max Liq |
+| **Safety**    | Filter non-sellable tokens (recommended on)                        |
+| **Filtering** | Mint WL/BL, Deployer WL/BL, Exact name/ticker, Contains            |
+
+**Actions:** Activate, Reset, Dup, Delete, Back.
+
+<Info>
+  Use **Filter non-sellable tokens**, **Min Liq**, and blacklists to reduce risk. Set **Max** buys
+  to cap exposure.
+</Info>
