@@ -14,29 +14,22 @@ This documentation will help you get started with trading on prediction markets 
     Monitor your performance
   </Card>
   <Card title="Notifications" icon="bell">
-    New events and claimable bets
+    New events and resolved markets
   </Card>
-  <Card title="Charts" icon="chart-bar">
-    View market trends and historical data
+  <Card title="Clans" icon="users">
+    Compete and share your winnings
   </Card>
 </CardGroup>
 
 ## Getting Started
 
-### Step 1: Join the Telegram Group
+### Step 1: Start the Bot
 
-To access and communicate with the bot, you must first join our private beta group:
-
-1. [Join Comet Predict Private Beta](https://jupiter-exchange.slack.com/archives/C0A1Q5W0G06/p1764930476799409)
-2. Once you've joined the group, you'll be able to access the bot
-
-### Step 2: Start the Bot
-
-1. [Launch the bot](https://t.me/jup_pred_bot)
+1. [Launch the bot](https://t.me/JupiterCometPredictBot)
 2. Click **Start** or send `/start` to begin
 3. The bot will automatically create a Solana wallet for you
 
-### Step 3: Wallet Setup
+### Step 2: Wallet Setup
 
 The bot automatically creates a Solana wallet for you when you first start using the bot in a **private chat**.
 
@@ -47,18 +40,18 @@ Your wallet address is displayed in the main menu. You can:
 - **Export your private key** if you want to use the wallet elsewhere
 - **Import your wallet** in case you prefer
 
-### Step 4: Fund Your Wallet
+### Step 3: Fund Your Wallet
 
-Before you can place bets, you need to fund your wallet with SOL and USDC:
+Before you can place predictions, you need to fund your wallet with SOL and USDC:
 
 1. **Copy your wallet address** from the main menu
 2. **Send SOL and USDC** to this address:
 
 <Info>**Important**: Keep some SOL in your wallet for transaction fees.</Info>
 
-### Step 5: Browse Events
+### Step 4: Browse Events
 
-1. From the main menu, select a category:
+1. From the main menu you can browse or search:
 
 <img
   src="/images/prediction-bot/menu.png"
@@ -66,26 +59,34 @@ Before you can place bets, you need to fund your wallet with SOL and USDC:
   style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
 />
 
-2. Select an event to view available markets
+2. At any moment you can search by keywords:
 
 <img
-  src="/images/prediction-bot/event-list.png"
+  src="/images/prediction-bot/search.png"
   alt="List of events showing categories and titles"
   style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
 />
 
-3. Choose a market to see details and place a bet
+3. When browsing, narrow down events by category or other filters, select an event to view available markets:
 
 <img
-  src="/images/prediction-bot/event-view.png"
+  src="/images/prediction-bot/browsing.png"
+  alt="List of events showing categories and titles"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+4. Choose a market to see details and place a prediction
+
+<img
+  src="/images/prediction-bot/event_view.png"
   alt="Event view showing market details"
   style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
 />
 
-### Step 6: Place Your First Bet
+### Step 5: Place Your First Prediction
 
 1. Select a market from the event
-2. Choose **YES** or **NO** for the outcome
+2. Choose **YES** or **NO** as the outcome
 
 <img
   src="/images/prediction-bot/market-view.png"
@@ -93,41 +94,85 @@ Before you can place bets, you need to fund your wallet with SOL and USDC:
   style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
 />
 
-3. Select your bet amount (preset or custom by typing it)
+3. Select your prediction amount (preset or custom by typing it)
 
 <img
   src="/images/prediction-bot/bet-amount-input.png"
-  alt="Bet amount selection screen"
+  alt="Prediction amount selection screen"
   style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
 />
 
-4. Confirm your bet
+4. Confirm your prediction
 
 <img
   src="/images/prediction-bot/confirm-bet.png"
-  alt="Bet confirmation screen"
+  alt="Prediction confirmation screen"
   style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
 />
 
 5. Your order will be placed!
 
 <img
-  src="/images/prediction-bot/confirmed-bet.png"
-  alt="Confirmed bet with transaction signature"
+  src="/images/prediction-bot/confirmed_bet.png"
+  alt="Confirmed prediction with transaction signature"
   style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
 />
 
-### Step 7: Track Your Positions
+### Step 6: Track Your Positions
 
 1. Go back to the main menu
 2. Click **💼 Positions** to view all your active positions
 3. Monitor your positions and wait for markets to settle
 
 <img
-  src="/images/prediction-bot/positions-view.png"
-  alt="Positions list showing active bets"
+  src="/images/prediction-bot/positions_view.png"
+  alt="Positions list showing active predictions"
   style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
 />
+
+4. Select a position to view details, close it early, or share your portfolio:
+
+<img
+  src="/images/prediction-bot/selected-positions.png"
+  alt="Position details with close option"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+### Step 7: Join a Clan
+
+Clans let you compete with friends and track your group's performance on the leaderboard.
+
+1. Go to **⚙️ Settings** → **👥 Clan Settings**
+
+If you're not in any group with the bot, you'll see:
+
+<img
+  src="/images/prediction-bot/clan_no_group.png"
+  alt="Clan settings when not in a group"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+2. Add the bot to a Telegram group to create or join a clan
+3. Once in a group, you can view your clan's stats and members:
+
+<img
+  src="/images/prediction-bot/clan_settings_menu.png"
+  alt="Clan settings showing group info"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+4. Check out the **🏆 Leaderboard** to see how you and your clan rank:
+
+<img
+  src="/images/prediction-bot/leaderboard.png"
+  alt="Top traders leaderboard"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+/>
+
+You can filter the leaderboard by:
+- **Individual** or **Clans** rankings
+- **PnL**, **Volume**, or **Win Rate**
+- **Weekly**, **Monthly**, or **All Time** periods
 
 ## Security Best Practices
 

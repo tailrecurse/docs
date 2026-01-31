@@ -28,6 +28,7 @@
           {
             "group": "Prediction Bot",
             "pages": [
+              "prediction-bot/clans",
               "prediction-bot/notifications",
               "prediction-bot/wallet",
               "prediction-bot/commands"
@@ -59,12 +60,12 @@
         {
           "anchor": "Launch Comet Predict Bot",
           "icon": "meteor",
-          "href": "https://t.me/jup_pred_bot"
+          "href": "https://t.me/JupiterCometPredictBot"
         },
         {
           "anchor": "Launch Comet Trading Bot",
           "icon": "comet",
-          "href": "https://t.me/jup_comet_bot"
+          "href": "https://t.me/JupiterCometPredictBot"
         },
         {
           "anchor": "Community",
