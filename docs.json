@@ -14,7 +14,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Comet Predict Bot",
+        "tab": "Jupiter Predict Bot",
         "icon": "meteor",
         "groups": [
           {
@@ -63,7 +63,7 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Launch Comet Predict Bot",
+          "anchor": "Launch Jupiter Predict Bot",
           "icon": "meteor",
           "href": "https://t.me/JupiterCometPredictBot"
         },
