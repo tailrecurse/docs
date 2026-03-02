@@ -4,55 +4,96 @@ title: 'Copy Trading'
 
 Copy Trader mirrors trades from another wallet to yours. Configure target wallet, amounts, slippage, and filters; only **active** configs execute trades.
 
-## Menu
+## Dashboard
 
 <img
   src="/images/trading-bot/copy-trading.png"
-  alt="Copy Trader main menu"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  alt="Copy Trader dashboard"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
+
+Each config displays a status indicator:
 
 | Indicator        | Meaning                                            |
 | ---------------- | -------------------------------------------------- |
 | **Green circle** | **Active** — config is running and copying trades. |
 | **Red circle**   | **Inactive** — config is paused.                   |
 
-**Actions:** **Add config** (creates new; you’ll enter target wallet), **Refresh**, **Back**.
+Use the filter tabs at the top of the dashboard to view **All**, **Active**, or **Inactive** configs (each tab shows a count). Configs are paginated and identified by memorable auto-generated names.
+
+Tap **Add config** to create a new configuration.
 
 ---
 
-## Target wallet (new config)
-
-<img
-  src="/images/trading-bot/copy-trading-wallet.png"
-  alt="Enter target wallet address"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
-/>
-
-Enter the **Solana address** of the wallet to copy. Your connected wallet executes the copied trades.
-
----
-
-## Config screen
+## Config Screen
 
 <img
   src="/images/trading-bot/copy-trading-config.png"
   alt="Copy trade configuration"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
-Tap any field to edit. Top line: config name, target address, **Status** (green = Active, red = Inactive), buy count.
+Tap any field to edit. The config screen is organized into three tabs: **Basic**, **Strategy**, and **Filters**.
 
-| Section           | Fields                                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
-| **Core**          | Wallet (yours), Name, Target address                                    |
-| **Buy strategy**  | Buy exact / Buy % / Buy fixed (one selected = green)                    |
-| **Sell strategy** | Don’t follow / Follow % / Sell fixed %                                  |
-| **Execution**     | Buy & sell slippage, Max buys, Max buys/token                           |
-| **Filters**       | Platforms, Max buy amount, Min/Max trigger buy, token age, Min/Max mcap |
-| **Safety**        | Filter non-sellable tokens (recommended on), Mint blacklist             |
-| **Schedule**      | Start at, End at (optional)                                             |
+### Basic Tab
 
-**Actions:** Activate, Reset buys, Duplicate, Delete, Back.
+| Field             | Description                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| **Name**          | Config name (1-20 characters, must be unique across your configs).                               |
+| **Target Wallet** | Solana address of the wallet to copy. You cannot copy your own wallet.                           |
+| **Wallet**        | Your wallet used to execute copied trades. Opens a wallet selector if you have multiple wallets. |
+| **Start Time**    | Optional daily trading window start in UTC. Accepts formats like `14:30`, `9:00:00`, or `19`.    |
+| **End Time**      | Optional daily trading window end in UTC. Same format as Start Time.                             |
 
-<Info>Keep **Filter non-sellable tokens** on and verify the target wallet address.</Info>
+### Strategy Tab
+
+| Field                  | Description                                                                                                                                                                |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Buy Strategy**       | **Exact** — copy the exact trade size. **Percentage** — copy a percentage of the target's size (can exceed 100%). **Fixed Amount** — use a fixed SOL amount for every buy. |
+| **Sell Strategy**      | **Off** — no automatic selling. **Follow Percentage** — sell when the target sells any amount. **Fixed Percentage** — sell a fixed percentage of your holdings.            |
+| **Buy Slippage**       | Slippage tolerance for buys, 0.1-100%. Set to **Auto** to let the bot calculate the optimal value.                                                                         |
+| **Sell Slippage**      | Slippage tolerance for sells, 0.1-100%. Set to **Auto** to let the bot calculate the optimal value.                                                                        |
+| **Max Buys**           | Total maximum buys the config will execute (max: 1,000). The config auto-pauses when this limit is reached.                                                                |
+| **Max Buys Per Token** | Maximum buys per individual token (max: 500).                                                                                                                              |
+
+### Filters Tab
+
+| Field                   | Description                                                                                                                                                                                                       |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Platforms**           | Multi-select filter for trade sources: **METEORA_DBC** (Meteora DBC / Jup Studio / Moonshot), **METEORA_DLMM**, **METEORA_DAMM_V2**, **PUMP_FUN** (Pump Fun), **PUMP_AMM** (Pump Fun AMM), **RAYDIUM_LAUNCHPAD**. |
+| **Max Buy Amount**      | Maximum SOL spent per copied trade.                                                                                                                                                                               |
+| **Min Trigger Buy**     | Minimum target buy size (in SOL) required to trigger a copy.                                                                                                                                                      |
+| **Max Trigger Buy**     | Maximum target buy size (in SOL) that will trigger a copy.                                                                                                                                                        |
+| **Min Token Age**       | Only copy trades for tokens older than this value. Format: `1d 2h 30m`.                                                                                                                                           |
+| **Max Token Age**       | Only copy trades for tokens younger than this value. Same format as Min Token Age.                                                                                                                                |
+| **Min Market Cap**      | Only copy trades for tokens above this market cap. Supports shorthand: `1K`, `1M`, `1B`.                                                                                                                          |
+| **Max Market Cap**      | Only copy trades for tokens below this market cap. Same shorthand supported.                                                                                                                                      |
+| **Blacklisted Mints**   | A list of token mint addresses that will never be copied.                                                                                                                                                         |
+| **Filter Non-Sellable** | Toggle to skip tokens that cannot be sold. Recommended to keep **on**.                                                                                                                                            |
+
+---
+
+## Trade Logs
+
+<img
+  src="/images/trading-bot/copy-trading-logs.png"
+  alt="Copy trade logs"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
+/>
+
+Each config has a dedicated trade log. Filter the log by **All**, **Followed** (trades that were executed), or **Skipped** (trades that were filtered out). The list is paginated.
+
+---
+
+## Actions
+
+| Action                    | Description                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------- |
+| **Activate / Deactivate** | Toggle the config on or off. Only active configs execute trades.                         |
+| **Reset Buys**            | Reset the buy counter so the config can resume trading after hitting its max buys limit. |
+| **Duplicate**             | Create a copy of the config with the same settings.                                      |
+| **Delete**                | Permanently remove the config.                                                           |
+
+<Info>
+  Keep **Filter non-sellable tokens** on and verify the target wallet address before activating.
+</Info>

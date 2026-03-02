@@ -1,0 +1,124 @@
+---
+title: 'Referrals & Invites'
+---
+
+Fee-sharing program where you earn a percentage of trading fees from users you refer. The referral fee is calculated proportionally based on fee BPS allocation — when a referred user trades, the referral portion of the fee is tracked and becomes claimable.
+
+## Dashboard
+
+<img
+  src="/images/trading-bot/referral-dashboard.png"
+  alt="Referral dashboard"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
+/>
+
+| Stat               | Meaning                                        |
+| ------------------ | ---------------------------------------------- |
+| **Referred users** | Number of users who redeemed your invite code. |
+| **Total earned**   | Lifetime referral fees earned (USD).           |
+| **Pending**        | Fees from recent trades not yet claimable.     |
+| **Claimable**      | Fees ready to withdraw.                        |
+| **Claimed**        | Fees already withdrawn.                        |
+
+**Actions:** Generate invite link, Set Code, Claim, History, Invites, Back.
+
+---
+
+## Getting an invite link
+
+To generate your first invite link you must meet the eligibility requirements (when gating is enabled):
+
+1. Hold a minimum of 0.1 SOL balance in your wallet.
+2. Have completed at least one trade.
+
+Once eligible, tap **Generate invite link** on the dashboard. The bot creates a unique code and displays your share link:
+
+```
+https://t.me/JupiterCometTradingBot?start=CODE
+```
+
+<Info>
+  If you already have a code, the dashboard shows your link and code directly — no generation step
+  needed.
+</Info>
+
+---
+
+## Sharing your invite
+
+Share by **link** or **code**. New users join by opening the link or typing `/start CODE` in the bot.
+
+### Custom invite codes
+
+Tap **Set Code** to pick your own code.
+
+| Rule           | Detail                                                               |
+| -------------- | -------------------------------------------------------------------- |
+| **Length**     | 3 – 64 characters.                                                   |
+| **Characters** | Letters, numbers, `_`, or `-`. No spaces.                            |
+| **Uniqueness** | Each code must be unique across all users. Taken codes are rejected. |
+
+<Info>
+  Renaming your code invalidates the old one. Anyone who uses the old link will no longer be
+  attributed to you, and the old code may be claimed by another user.
+</Info>
+
+---
+
+## Claiming fees
+
+When claimable fees are available, the dashboard shows a wallet selector and a **Claim** button with the USD total.
+
+1. Select the wallet to receive the payout.
+2. Tap **Claim** to see a per-token breakdown of amounts.
+3. Confirm to submit the on-chain transaction.
+
+| Detail               | Value                                                          |
+| -------------------- | -------------------------------------------------------------- |
+| **Tokens per claim** | Up to 5 token types per transaction. Claim again for the rest. |
+| **Gas**              | Paid from your wallet — you need SOL for transaction fees.     |
+| **Fee lifecycle**    | Pending (trade just executed) → Claimable → Claimed.           |
+
+<Info>
+  If a claim times out, the transaction may still confirm on-chain. Check back shortly — the bot
+  recovers interrupted claims automatically.
+</Info>
+
+---
+
+## Referral history
+
+<img
+  src="/images/trading-bot/referral-history.png"
+  alt="Referral history"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
+/>
+
+Paginated list (5 per page) of trades that generated referral fees.
+
+| Column     | Description                     |
+| ---------- | ------------------------------- |
+| **Date**   | UTC timestamp of the trade.     |
+| **Earned** | Referral fee amount in USD.     |
+| **Side**   | Buy or sell.                    |
+| **Wallet** | Referred user's wallet address. |
+| **Pair**   | Input → output token pair.      |
+| **Status** | Claimable or Claimed.           |
+
+---
+
+## Invite redemptions
+
+<img
+  src="/images/trading-bot/invite-redemptions.png"
+  alt="Invite redemptions"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
+/>
+
+Paginated list (10 per page) of users who redeemed your invite code.
+
+| Column     | Description                                      |
+| ---------- | ------------------------------------------------ |
+| **Date**   | When the user redeemed your code.                |
+| **Trades** | Number of trades the referred user has executed. |
+| **Earned** | Total referral fees earned from that user (USD). |

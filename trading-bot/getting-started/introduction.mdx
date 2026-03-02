@@ -11,21 +11,33 @@ This documentation will help you get started with trading tokens on Solana direc
     Swap tokens with the best rates
   </Card>
   <Card title="Limit Orders" icon="chart-line">
-    Set buy/sell orders at your target price
+    Set buy/sell orders at your target price with configurable expiry
   </Card>
   <Card title="DCA Strategy" icon="clock">
     Place automated recurring orders
   </Card>
-  <Card title="Token Sniping" icon="bullseye">
-    Snipe fast new token launches
+  <Card title="Portfolio & PnL" icon="chart-pie">
+    Track unrealized, realized, and total PnL per token
+  </Card>
+  <Card title="Referrals" icon="share-nodes">
+    Earn fees by referring other traders
+  </Card>
+  <Card title="Multi-Wallet" icon="wallet">
+    Create and manage multiple wallets
+  </Card>
+  <Card title="Copy Trading" icon="users">
+    Mirror trades from any wallet automatically
+  </Card>
+  <Card title="Sniper Mode" icon="bullseye">
+    Snipe new token launches and liquidity pools
   </Card>
 </CardGroup>
 
 ## Getting Started
 
-### Step 1: Get an Invitation
+### Step 1: Get an Invitation (only for the first 48h after launch)
 
-The bot is currently in private beta. To get access, you need an invitation from CatLampurr.
+Get an invite link or code from an existing user. Use `/start <code>` to join.
 
 ### Step 2: Start the Bot
 
@@ -35,7 +47,7 @@ The bot is currently in private beta. To get access, you need an invitation from
 
 ### Step 3: Wallet Setup
 
-The bot automatically creates a Solana wallet for you when you first start using the bot in a **private chat**.
+The bot automatically creates your first Solana wallet. You can create additional wallets later via the `/wallets` command.
 
 Your wallet address is displayed in the main menu. You can:
 
@@ -59,7 +71,7 @@ Before you can start trading, you need to fund your wallet with SOL:
 <img
   src="/images/trading-bot/menu.png"
   alt="Trading bot main menu"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
 2. Send a token mint address or symbol to scan it:
@@ -67,8 +79,10 @@ Before you can start trading, you need to fund your wallet with SOL:
 <img
   src="/images/trading-bot/scan.png"
   alt="Token scan interface"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
+
+The scan card shows security indicators including Jupiter verification, suspicious token flags, mint/freeze authority status, holder information, and LP details.
 
 ### Step 6: Choose Your Trading Action
 
@@ -79,7 +93,7 @@ After scanning a token, you can choose from multiple trading options:
 <img
   src="/images/trading-bot/swap.png"
   alt="Swap interface for buying or selling tokens"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
 - **Quick Buy**: Instantly purchase tokens with SOL
@@ -91,20 +105,21 @@ After scanning a token, you can choose from multiple trading options:
 <img
   src="/images/trading-bot/limit.png"
   alt="Limit order interface"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
 - Set buy orders when price drops to your target
 - Set sell orders when price reaches your target
 - Set target prices as specific amounts or percentage changes (+/- %)
 - Orders execute automatically when triggered
+- Set an expiry for your orders (default: 7 days, or choose from presets like 10m, 1h, 1d, 3d, 30d)
 
 #### DCA - Dollar Cost Averaging
 
 <img
   src="/images/trading-bot/dca.png"
   alt="DCA (Dollar Cost Averaging) interface"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
 - Automate recurring purchases at set intervals
@@ -114,12 +129,12 @@ After scanning a token, you can choose from multiple trading options:
 ### Step 7: View Your Holdings
 
 1. Go back to the main menu
-2. View your token holdings and balances
+2. View your portfolio with PnL tracking — see unrealized, realized, and total PnL per token, aligned with jup.ag
 
 <img
   src="/images/trading-bot/holdings.png"
   alt="Token holdings view"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
 ## Security Best Practices
@@ -136,7 +151,22 @@ Now that you've learned the basics, explore these guides:
 
 <CardGroup cols={2}>
   <Card title="Wallet Management" icon="wallet" href="/trading-bot/wallet">
-    Manage your wallet and private keys
+    Manage multiple wallets and private keys
+  </Card>
+  <Card title="Portfolio & Holdings" icon="chart-pie" href="/trading-bot/holdings">
+    Track your PnL
+  </Card>
+  <Card title="Active Orders" icon="list-check" href="/trading-bot/orders">
+    Manage DCA and limit orders
+  </Card>
+  <Card title="Referrals & Invites" icon="share-nodes" href="/trading-bot/referral">
+    Earn referral fees
+  </Card>
+  <Card title="Copy Trading" icon="users" href="/trading-bot/copy-trading">
+    Mirror trades from other wallets
+  </Card>
+  <Card title="Sniper Mode" icon="bullseye" href="/trading-bot/sniper-mode">
+    Auto-buy new token launches
   </Card>
   <Card title="Commands" icon="list" href="/trading-bot/commands">
     Learn all available commands

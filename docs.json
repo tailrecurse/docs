@@ -51,9 +51,12 @@
           {
             "group": "Trading Bot",
             "pages": [
+              "trading-bot/holdings",
+              "trading-bot/orders",
+              "trading-bot/referral",
+              "trading-bot/wallet",
               "trading-bot/copy-trading",
               "trading-bot/sniper-mode",
-              "trading-bot/wallet",
               "trading-bot/commands"
             ]
           }

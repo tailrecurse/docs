@@ -4,80 +4,116 @@ title: 'Commands'
 
 ## Scanning Tokens
 
-To trade any token, simply send its mint address or symbol to the bot. The bot will:
+Send a token mint address or symbol to scan any token. The bot will display:
 
-1. **Scan the token** and display information
-2. **Show trading options**: Swap, Limit Order, or DCA
-3. **Display your holdings** if you own the token
+- **Token info** and trading options (Swap, Limit Order, DCA)
+- **Your holdings** if you own the token
+- **Security indicators**:
+  - Jupiter verification (verified or not verified)
+  - Suspicious flag (flagged or clean)
+  - Mint authority disabled (safe or still enabled)
+  - Freeze authority revoked (safe or still active)
+  - Trade tax (none or percentage)
+  - Holder info: total holders, top holders percentage, dev balance percentage, dev migrations
+  - LP info: liquidity (with low-liquidity warning), launchpad name, pool creation time
+  - Social links
+- **Liquidity information**:
+  - Token liquidity with warnings for low liquidity tokens
+  - Token creation date and time
 
 <img
   src="/images/trading-bot/scan.png"
-  alt="Token scan interface"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  alt="Token scan interface showing token info, security indicators, and trading options"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
-To access commands, tap the menu icon (☰) next to the message input or type `/`
+## Command List
+
+To access commands, tap the menu icon next to the message input or type `/`.
 
 <img
   src="/images/trading-bot/commands.png"
-  alt="Bot commands menu"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  alt="Bot commands menu showing all available slash commands"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
 ### `/start`
 
-- Creates your wallet (if first time)
-- Shows the main menu
-- Displays your wallet address and balances
+Creates your wallet on first use, or shows the main menu if you already have one.
+
+- **`/start <invite_code>`** -- join via an invite code from an existing user.
 
 ### `/menu`
 
-Shows the main menu.
+Shows the main menu with your wallet address, balances (top 5 tokens by USD value), and navigation buttons.
 
 ### `/swap`
 
-Scan a token to swap. You can:
-
-- Send a token mint address or symbol
-- The bot will scan the token and show trading options
-- Choose to buy or sell tokens instantly
+Scan a token to swap. Send a token mint address or symbol, choose buy or sell, and enter an amount.
 
 ### `/limit`
 
-Create a limit order. You can:
+Create a limit order at a target price.
 
-- Set buy orders at a target price below current market
-- Set sell orders at a target price above current market
-- Orders execute automatically when price reaches your target
+- Buy orders execute when the price drops to your target.
+- Sell orders execute when the price rises to your target.
+- **Expiry**: configurable duration. Presets: 10m, 1h, 1d, 3d, 7d, 30d, or custom. Default is 7 days.
 
 ### `/dca`
 
-Set up Dollar Cost Averaging. You can:
+Set up Dollar Cost Averaging to automate recurring token purchases at set intervals.
 
-- Automate recurring token purchases
-- Set the amount per transaction
-- Configure the interval (minutes, hours, or days)
-- Spread your investment over time
+### `/holdings`
+
+View your portfolio with PnL tracking. Shows token balances, USD values, unrealized/realized/total PnL per token, and a wallet-level PnL summary. See [Portfolio & Holdings](/trading-bot/holdings).
+
+### `/orders`
+
+View and manage active DCA and limit orders. Cancel orders directly from this screen. See [Active Orders](/trading-bot/orders).
+
+### `/snipe`
+
+Open the Sniper Mode dashboard. Configure automatic buys for new token launches. See [Sniper Mode](/trading-bot/sniper-mode).
+
+### `/copy`
+
+Open the Copy Trader dashboard. Mirror trades from other wallets automatically. See [Copy Trading](/trading-bot/copy-trading).
+
+### `/wallets`
+
+Manage your wallets -- create, rename, archive, delete, import, or export. See [Wallet Management](/trading-bot/wallet).
+
+### `/referral`
+
+View your referral dashboard with earnings, stats, and claim options. See [Referrals & Invites](/trading-bot/referral).
+
+### `/invites`
+
+View and manage your invite codes. Share your invite link with others.
+
+### `/settings`
+
+Open the bot settings menu.
 
 ### `/withdraw`
 
-1. **🏠 Main menu**
-2. **💸 Withdraw**
-3. Enter the recipient Solana address
+Withdraw tokens to an external wallet.
+
+1. Select a wallet if you have multiple wallets.
+2. Enter the recipient Solana address.
 
 <img
   src="/images/trading-bot/withdraw-input-address.png"
-  alt="Withdraw input address screen"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  alt="Withdraw screen prompting for a recipient Solana address"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
-4. Select token (SOL or USDC)
-5. Choose amount (preset percentages or custom)
+3. Select a token and choose an amount (preset percentages or custom).
 
 <img
   src="/images/trading-bot/withdraw-input-amount.png"
-  alt="Withdraw input amount screen"
-  style={{ display: 'block', margin: '0 auto', maxWidth: '100%', borderRadius: '0.5rem' }}
+  alt="Withdraw screen showing token selection and amount options"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
 />
 
-6. Confirm the withdrawal
+4. Confirm the withdrawal.

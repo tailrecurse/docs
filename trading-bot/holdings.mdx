@@ -1,0 +1,66 @@
+---
+title: 'Portfolio & Holdings'
+---
+
+View all your token holdings with PnL tracking aligned with [jup.ag](https://jup.ag). The holdings screen gives you a complete picture of your portfolio performance across every token you've traded.
+
+## How to Access
+
+- Type `/holdings` in the chat, or
+- Tap the **Holdings** button on the main menu
+
+## Holdings Screen
+
+<img
+  src="/images/trading-bot/holdings.png"
+  alt="Holdings screen showing token list with PnL"
+  style={{ display: 'block', margin: '0 auto', maxWidth: '400px', borderRadius: '0.5rem' }}
+/>
+
+### Wallet-Level Summary
+
+The top of the screen shows an aggregated summary for your wallet:
+
+| Field               | Description                                 |
+| ------------------- | ------------------------------------------- |
+| **Total PnL**       | Combined profit/loss in USD and percentage  |
+| **Realized PnL**    | Profit/loss from tokens you've sold         |
+| **Unrealized PnL**  | Profit/loss on tokens you're still holding  |
+| **Total Assets**    | Number of token positions in your portfolio |
+| **Portfolio Value** | Total USD value of all holdings             |
+
+### Per-Token Information
+
+Each token entry displays:
+
+| Field              | Description                                                                                   |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| **Token symbol**   | Linked to Jupiter for quick access                                                            |
+| **Balance**        | Amount of tokens held                                                                         |
+| **USD value**      | Current value in USD                                                                          |
+| **Unrealized PnL** | Profit/loss on currently held tokens (USD + percentage)                                       |
+| **Realized PnL**   | Profit/loss on sold tokens (USD + percentage)                                                 |
+| **Total PnL**      | Combined realized + unrealized (USD + percentage)                                             |
+| **Position %**     | What percentage of the originally bought amount is still held                                 |
+| **State label**    | **Holding** — all tokens held <br/> **Sold All** — fully exited <br/> **Partial** — some sold |
+
+<Info>
+  SOL and stablecoins (USDC, USDT, JupUSD) do not show PnL data. Tokens with dust-level value are
+  automatically excluded from the list.
+</Info>
+
+---
+
+## Navigation
+
+Holdings are paginated with **5 tokens per page**.
+
+- **Numbered buttons (1–5)** — tap to jump to the scan card for that token
+- **Arrow buttons** — move between pages
+- **X–Y of Z** — shows the current range and total token count
+
+---
+
+## Wallet Selector
+
+If you have multiple wallets connected, use the **Wallet** selector to switch between them and view holdings for each wallet separately.
