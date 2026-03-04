@@ -37,8 +37,8 @@
         ]
       },
       {
-        "tab": "Comet Trading Bot",
-        "icon": "comet",
+        "tab": "Jupiter Trading Bot",
+        "icon": "rocket",
         "groups": [
           {
             "group": "Getting Started",
@@ -71,8 +71,8 @@
           "href": "https://t.me/JupiterCometPredictBot"
         },
         {
-          "anchor": "Launch Comet Trading Bot",
-          "icon": "comet",
+          "anchor": "Launch Jupiter Trading Bot",
+          "icon": "rocket",
           "href": "https://t.me/JupiterCometTradingBot"
         },
         {
