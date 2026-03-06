@@ -1,0 +1,42 @@
+---
+title: 'Deep Links'
+---
+
+Deep links let you craft URLs that open the bot with a pre-filled action — for example, jumping straight to a token scan or attaching a referral code.
+
+## URL format
+
+```
+https://t.me/JupiterCometTradingBot?start=PAYLOAD
+```
+
+---
+
+## Token deep-link
+
+Opens the bot directly on a token scan.
+
+```
+https://t.me/JupiterCometTradingBot?start=t_<MINT_ADDRESS>
+https://t.me/JupiterCometTradingBot?start=t_<MINT_ADDRESS>_<INVITE_CODE>
+```
+
+- `MINT_ADDRESS` — a valid Solana base58 token address.
+- `INVITE_CODE` (optional) — an invite code (max 17 characters) appended after a `_` separator.
+
+**Examples:**
+
+```
+https://t.me/JupiterCometTradingBot?start=t_JuprjznTrTSp2UFa3ZBUFgwdAmtZCq4MQCwysN55USD
+https://t.me/JupiterCometTradingBot?start=t_JuprjznTrTSp2UFa3ZBUFgwdAmtZCq4MQCwysN55USD_mycode
+```
+
+---
+
+## Invite code link
+
+Opens the bot and redeems an invite code for new users.
+
+```
+https://t.me/JupiterCometTradingBot?start=<INVITE_CODE>
+```
