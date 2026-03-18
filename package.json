@@ -9,6 +9,6 @@
     "lint:fix": "echo 'No auto-fix available in mintlify CLI, running lint target instead.' && bun lint"
   },
   "devDependencies": {
-    "mint": "^4.2.232"
+    "mint": "^4.2.435"
   }
 }
